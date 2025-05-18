@@ -34,31 +34,24 @@
       background-position: center;
     }
 
-    .left div:nth-child(1) {
-      background-image: url('/1.jpeg');
-    }
-
-    .left div:nth-child(2) {
-      background-image: url('/2.jpeg');
-    }
-
-    .left div:nth-child(3) {
-      background-image: url('/3.jpeg');
-    }
-
-    .left div:nth-child(4) {
-      background-image: url('/4.jpeg');
-    }
+    .left div:nth-child(1) { background-image: url('/1.jpeg'); }
+    .left div:nth-child(2) { background-image: url('/2.jpeg'); }
+    .left div:nth-child(3) { background-image: url('/3.jpeg'); }
+    .left div:nth-child(4) { background-image: url('/4.jpeg'); }
 
     .right {
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: flex-end;
       padding: 4rem;
       text-align: right;
       background-color: #f5f5f5;
+    }
+
+    .content {
+      max-width: 500px;
     }
 
     .right h1 {
@@ -69,7 +62,6 @@
     .right p {
       font-size: 1.8rem;
       margin-bottom: 1.2rem;
-      max-width: 500px;
     }
 
     .contact {
@@ -100,8 +92,9 @@
       }
 
       .right {
-        align-items: center;
-        text-align: center;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
         padding: 2rem;
       }
 
@@ -120,13 +113,15 @@
       <div></div>
     </div>
     <div class="right">
-      <h1>Hi, I'm Ondrej</h1>
-      <p>a GA pilot from Prague,</p>
-      <p>Let's go flying together, share gas, and make new pilot friends.</p>
-      <div class="contact">
-        <a href="https://instagram.com/ondrejsika" target="_blank">@ondrejsika</a>
-        <a href="tel:+420773453376">+420 773 453 376</a>
-        <a href="mailto:ond@rej.is">ond@rej.is</a>
+      <div class="content">
+        <h1>Hi, I'm Ondrej</h1>
+        <p>a GA pilot from Prague,</p>
+        <p>Let's go flying together, share gas, and make new pilot friends.</p>
+        <div class="contact">
+          <a href="https://instagram.com/ondrejsika" target="_blank">@ondrejsika</a>
+          <a href="tel:+420773453376">+420 773 453 376</a>
+          <a href="mailto:ond@rej.is">ond@rej.is</a>
+        </div>
       </div>
     </div>
   </div>
