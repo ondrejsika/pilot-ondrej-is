@@ -24,9 +24,30 @@
 
     .left {
       flex: 1;
-      background-image: url('https://ondrejsika.com/static/content/plane_cockpit.jpg');
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .left div {
       background-size: cover;
       background-position: center;
+    }
+
+    .left div:nth-child(1) {
+      background-image: url('/1.jpeg');
+    }
+
+    .left div:nth-child(2) {
+      background-image: url('/2.jpeg');
+    }
+
+    .left div:nth-child(3) {
+      background-image: url('/3.jpeg');
+    }
+
+    .left div:nth-child(4) {
+      background-image: url('/4.jpeg');
     }
 
     .right {
@@ -34,20 +55,21 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      text-align: center;
+      align-items: flex-end;
+      padding: 4rem;
+      text-align: right;
       background-color: #f5f5f5;
     }
 
     .right h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 4rem;
+      margin-bottom: 2rem;
     }
 
     .right p {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      max-width: 500px;
     }
 
     @media (max-width: 768px) {
@@ -57,19 +79,30 @@
 
       .left, .right {
         flex: unset;
-        height: 50vh;
         width: 100%;
+        height: 50vh;
+      }
+
+      .right {
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="left"></div>
+    <div class="left">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <div class="right">
       <h1>Hi, I'm Ondrej</h1>
       <p>a GA pilot from Prague,</p>
-      <p>Let's go flying together, share gas, and make new pilot friends.
+      <p>Let's go flying together, share gas, and make new pilot friends.<br>
         @ondrejsika, +420 773 453 376, ond@rej.is.</p>
     </div>
   </div>
